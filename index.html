@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Map</title>
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ensure image file is in the same folder as this HTML file -->
+  <img src="IMG_20260819_142057.jpg.jpeg" usemap="#image-map" alt="Interactive Map" id="map-image">
+
+  <map name="image-map">
+      <area target="_blank" alt="Location" title="Location" href="https://maps.app.goo.gl/672HR65Y3cj6rrud9?g_st=ac" coords="1659,2298,152" shape="circle">
+  </map>
+
+  <!-- Script to resize coordinates -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    // Wait until the image is fully loaded before calculating responsive map coordinates
+    window.addEventListener('load', function() {
+      imageMapResize();
+    });
+  </script>
+
+</body>
+</html>
